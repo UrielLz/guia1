@@ -3,13 +3,13 @@ import numpy as np
 import matplotlib.pyplot as plt
 from funciones import funcion_objetivo, restricciones, obtener_parametros
 
-# Paleta de colores pastel
+
 PALETA = {
-    "linea": "#6C63FF",        # violeta fuerte
-    "mejor_punto": "#FF4081",  # rosa intenso
-    "factibles": "#00E676",    # verde brillante
-    "no_factibles": "#FF1744", # rojo brillante
-    "optimo": "#40C4FF"        # azul claro neón
+    "linea": "#6C63FF",        
+    "mejor_punto": "#FF4081",  
+    "factibles": "#00E676",    
+    "no_factibles": "#FF1744", 
+    "optimo": "#40C4FF"        
 }
 
 st.set_page_config(layout="wide")
@@ -23,7 +23,7 @@ st.markdown("""
 # Layout
 col1, col2 = st.columns(2)
 
-# Configuración desde archivo externo de funciones
+
 st.sidebar.title(" Configuración del problema ")
 
 problemas_benchmark = {
@@ -239,7 +239,7 @@ with col1:
         st.markdown(r"""
         La selección decide si el individuo de prueba **reemplaza** al actual, con base en las **reglas de Deb** para problemas con restricciones.
 
-        #### ✅ Reglas de Deb:
+        #### Reglas de Deb:
         1. Si **ambos** ($u_i$, $x_i$) son factibles: elige el que tenga menor $f(x)$.
         2. Si **uno solo** es factible: selecciona el factible.
         3. Si **ambos son inviables**: selecciona el que tenga menor penalización $\phi(x)$.
